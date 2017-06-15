@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="PercentProgress.PerProBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PercentProgress"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <Grid Margin="0">
+        <ProgressBar Name="proBar" Value="0" Style="{StaticResource ProgressBarStyle}"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="txt" Text="{Binding ValueText,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBlockStyle}"/>
+            <TextBlock Name="percent" Text="%" Style="{StaticResource TextBlockStyle}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
